@@ -1,0 +1,17 @@
+{
+  "name": "middy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify-lambda serve ./src/lambdas",
+    "build": "netlify-lambda build ./src/lambdas"
+  },
+  "keywords": [],
+  "author": "Vitor Barbosa",
+  "license": "ISC",
+  "dependencies": {
+    "@middy/core": "^1.0.0-beta.5",
+    "netlify-lambda": "^1.6.3"
+  }
+}
