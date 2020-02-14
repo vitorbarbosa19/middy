@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@middy/core": "^1.0.0-beta.5",
+    "@middy/http-error-handler": "^1.0.0-beta.5",
     "@middy/http-json-body-parser": "^1.0.0-beta.5",
     "@middy/http-urlencode-body-parser": "^1.0.0-beta.5",
+    "http-errors": "^1.7.3",
     "netlify-lambda": "^1.6.3"
   }
 }
