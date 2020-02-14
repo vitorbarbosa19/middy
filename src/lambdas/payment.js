@@ -1,9 +1,13 @@
 const middy = require('@middy/core')
+const httpJsonBodyParser = require('@middy/http-json-body-parser')
+const httpUrlencodeBodyParser = require('@middy/http-urlencode-body-parser')
 
 const payment = async event => {
-	console.log('HERE')
 	try {
-		// const { creditCardNumber, expiryMonth, expiryYear, cvc, nameOnCard, amount } = event.body
+		console.log(event)
+		const { number, expiry, cvc, name, amount } = event.body
+		console.log(number)
+		console.log(expiry)
 		return {
 			statusCode: 200,
 			body: 'Ok'
@@ -17,5 +21,7 @@ const payment = async event => {
 }
 
 const handler = middy(payment)
+	.use(httpJsonBodyParser())
+	.use(httpUrlencodeBodyParser())
 
 module.exports = { handler }
